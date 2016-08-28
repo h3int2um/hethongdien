@@ -1,0 +1,24 @@
+\documentclass[border=12pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam} %Bien dich duoc tieng Viet
+\usepackage{amsmath,amsfonts,amssymb} %Font toan
+\usepackage[american,cuteinductors,smartlabels]{circuitikz}
+\begin{document}
+\begin{circuitikz}\draw
+	%Nhánh  X10
+	(0,0) to [L,*-*,l_ = $X_{10}$] (0,2)
+
+	%Nhánh X11 song song X11 song song X12 nối tiếp X13
+	(2,0) to [L,*-*, l_ = $X_{15}$] (2,2)
+
+	% Nối X10, X17
+	(-0.5,2) to [short] (2.5,2)
+
+	% Nhánh X15
+	(1,2) to [L,*-*,l_ = $X_{17}$] (1,4)
+
+	%Vẽ điểm ngắn mạch
+	(0,2.8) to [open,l_ = $\mathbf{N_1}$] (0.5,2.8)
+	;
+\end{circuitikz}	
+\end{document} 

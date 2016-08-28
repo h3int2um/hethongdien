@@ -1,0 +1,44 @@
+\documentclass[border=12pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam} %Bien dich duoc tieng Viet
+\usepackage{amsmath,amsfonts,amssymb} %Font toan
+\usepackage[american,cuteinductors,smartlabels]{circuitikz}
+\begin{document}
+\begin{circuitikz}\draw
+	%Nhánh  máy phát 1
+	(0,0) to [L,*-,l_ = $X_9$] (0,2) to [short] (0,4) to [L,-*, l_ = $X_3$] (0,6)
+								
+	%Nhánh máy phát 2
+	(3,0) to [L,*-*, l_ = $X_9$] (3,2) to [L, l_ = $X_7$] (3,4) to [L,*-*, l_ = $X_5$] (3,6)
+
+	%Nhánh máy phát 3
+	(6,0) to [L,*-*, l_ = $X_9$] (6,2) to [L, l_ = $X_7$] (6,4) to [L,*-*, l_ = $X_5$] (6,6)
+
+	%Nhánh máy phát 4
+	(10,0) to [L,*-,l_ = $X_9$] (10,2) to [L,-*, l_ = $X_4$] (10,6)
+
+	% Cuộn dây của máy biến áp tự ngẫu
+	(3,4) to [short,*-*] (6,4) to [short,*-] (9,4) to [short,-*] (9,6)
+
+	%Liên kết các nhánh của các máy biến biến áp 
+	(-1,6) to [short] (7,6)
+	(8,6) to [short] (11,6)
+
+	%Cuộn kháng
+	(2,2)	to [short] (3,2) to [L, l_ = $X_8$] (6,2) to [short] (7,2)
+	
+	%Đường dây kép
+	(1.5,6) to [L,*-*, l_ = $X_2$] (1.5,8)
+	(4.5,6) to [L,*-*, l_ = $X_2$] (4.5,8)
+
+	%Nối 2 đường dây kép với hệ thống
+	(.5,8) to [short] (5.5,8)
+
+	%Vẽ hệ thống
+	(3,8) to [L,*-*, l_ = $X_1$] (3,10)
+
+	%Vẽ điểm ngắn mạch
+	(6.5,2.8) to [open,l_ = $\mathbf{N_3}$] (7,2.8)
+	;
+\end{circuitikz}
+\end{document} 

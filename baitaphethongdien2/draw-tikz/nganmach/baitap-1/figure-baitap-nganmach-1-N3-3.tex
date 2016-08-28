@@ -1,0 +1,30 @@
+\documentclass[border=12pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam} %Bien dich duoc tieng Viet
+\usepackage{amsmath,amsfonts,amssymb} %Font toan
+\usepackage[american,cuteinductors,smartlabels]{circuitikz}
+\begin{document}
+\begin{circuitikz}\draw
+	%Nhánh máy phát 2
+	(3.5,0) to [L,*-*, l_ = $X_{23}$] (3.5,4) to [short] (3.5,4)
+
+	%Nhánh máy phát 3
+	(5.5,0) to [L,*-*, l_ = $X_9$] (5.5,2) to [L,*-*,l_ = $X_{21}$] (5.5,4) to [short] (3.5,4)
+
+	%Nhánh X22 nối với X13 nối thanh cái
+	(3.5,4) to [L,*-*,l_= $X_{22}$] (3.5,6) to [L,*-*, l_ = $X_{19}$] (3.5,8)
+	
+	%Nhánh X4 nối tiếp với X9
+	(7,0) to [L,*-*,l_ = $X_{12}$] (7,6)
+
+	% Nối các nhánh với nhau
+	(2.5,6) to [short] (8,6)
+	
+
+	% Thanh cái tại điểm ngắn mạch
+	(5,2) to [short] (6,2)
+	%Vẽ điểm ngắn mạch
+	(6,2.8) to [open,l_ = $\mathbf{N_3}$] (6.5,2.8)
+	;
+\end{circuitikz}
+\end{document} 

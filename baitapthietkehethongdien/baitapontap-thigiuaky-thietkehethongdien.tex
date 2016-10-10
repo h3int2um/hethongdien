@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam} %Bien dich duoc tieng Viet
+\usepackage{amsmath,amsfonts,amssymb} %Font toan
+\usepackage{xfrac}
+\usepackage{type1cm}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subfig}
+\graphicspath{ {images/} }
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage[unicode]{hyperref}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[american,cuteinductors,smartlabels]{circuitikz}
+\usetikzlibrary{arrows}
+\usepackage{tikz}
+\usetikzlibrary{calc,patterns,angles,quotes}
+\usetikzlibrary{arrows, decorations.markings, calc, fadings, decorations.pathreplacing, patterns, decorations.pathmorphing, positioning}	
+%\tikzstyle{every path}=[line width=1.2pt]
+%\title{\textbf{Giải bài tập Thiết kế hệ thống điện}}
+\title{\textbf{Bài tập ôn thi giữa kỳ\vspace{.4cm}\\Môn học Thiết kế hệ thống điện}}
+\author{SVTH: Thi Minh Nhựt -- Email: thiminhnhut@gmail.com}
+%\date{Ngày 05 tháng 10 năm 2016}
+\date{Thời gian: \today}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\everymath{\displaystyle}
+%%
+%%
+\tableofcontents
+%\listoffigures
+%\listoftables
+\newpage
+\pagenumbering{arabic}
+\input{define-command} 																% Một số lệnh LaTeX được định nghĩa lại vào tạo mới
+\input{cac-thong-so-duong-day-truyen-tai-tren-khong} 		% Các thông số của đường dây truyền tải trên không
+\newpage
+\input{cac-tham-so-cua-duong-day-truyen-tai} 						% Các tham số của đường dây truyền tải trên không
+\input{tai-lieu-tham-khao} 															% Tài liệu tham khảo
+\end{document}

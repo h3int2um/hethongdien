@@ -1,0 +1,460 @@
+\section{Các thông số đường dây truyền tải trên không}
+\subsection{Điện trở của đường dây truyền tải trên không}
+\begin{itemize}
+\item Với dây dẫn có chiều dài $l \unitp{m}$, tiết diện dây dẫn $A \unitp{m^2}$, điện trở suất $\rho \unitp{\Omega m}$, điện trở $R$ được xác định: $$ R = \dfrac{\rho l}{A} \unitp{\Omega}$$.
+\item Giá trị của điện trở suất $\rho \unitp{\Omega m}$ ở $20^0C$:
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+Dây đồng thường, dẫn điện $100\%$ & $\rho = 1.724 \times 10^{-8} $ \\ \hline
+Dây đồng kéo cứng, dẫn điện $97.3\%$ & $\rho = 1.78 \times 10^{-8} $ \\  \hline
+Dây đồng nhôm, dẫn điện $61\%$ & $\rho = 2.86 \times 10^{-8} $ \\ \hline
+Dây sắt hoặc dây thép & $\rho = 12.2 \times 10^{-8} $ \\ \hline
+\end{tabular}
+\end{center}
+\caption{Giá trị điện trở suất $\rho$ của một số kim loại ở $t^0 = 20^0C$} \label{Tab:gia-tri-dien-tro-suat}
+\end{table}
+\item  Với $R_0$ là điện trở ở $20^0C$, điện trở thay đổi theo nhiệt độ $t$ được xác định bằng công thức: $$R = R_0 \left[{1 + \alpha \left({t - 20}\right)}\right]$$
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|c|c|}\hline
+Kim loại & Điện trở suất $\unitp{\Omega m}$ & Hệ số nhiệt điện trở $\alpha \unitp{^0C^{-1}}$ \\ \hline
+Nhôm & $2.83 \times 10^{-8}$ & $0.0039$ \\ \hline
+Đồng cứng & $1.77 \times 10^{-8}$ & $0.00382$ \\ \hline
+Đồng thường & $1.72 \times 10^{-8}$ & $0.00393$ \\ \hline
+Sắt & $10.00 \times 10^{-8}$ & $0.0050$ \\ \hline
+Thép & $(12 \div 88) \times 10^{-8}$ & $0.001 \div 0.005$ \\ \hline
+Bạc & $1.53 \times 10^{-8}$ & $0.0038$ \\ \hline
+Đồng thau & $(6.4 \div 8.4) \times 10^{-8}$ & $0.0020$ \\ \hline
+\end{tabular}
+\end{center}
+\caption{Hệ số nhiệt điện trở $\alpha$ và điện trở suất $\rho$ của một số kim loại ở $t^0 = 20^0C$} \label{Tab:he-so-nhiet-dien-tro-gia-tri-dien-tro-suat}
+\end{table}
+\end{itemize}
+\newpage
+\subsection{Xác định khoảng cách trung bình hình học và bán kính trung bình hình học giữa các dây dẫn}\label{Sec:Dm-Ds}
+\begin{enumerate}[\it a.]
+\item \textit{Mạch một pha có 2 dây dẫn song song, mỗi dây gồm 1 sợi}
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5);
+\draw[dashed] (0,1) -- (0,-1.5);
+\draw[dashed] (0,0) -- (-.5,.5) -- (-1.5,.5);
+\draw (-1,.7) node{$r$};
+\draw[-triangle 90, dashed] (2,-1) -- (0,-1);
+\draw[-triangle 90, dashed] (2,-1) -- (4,-1);
+\draw (2,-.7) node{$D$};
+\draw (4,0) circle (.5);
+\draw[dashed] (4,0) -- (4.5,.5) -- (5.5,.5);
+\draw (5,.7) node{$r$};
+\draw[dashed] (4,1) -- (4,-1.5);
+\end{tikzpicture}
+\end{center}
+\caption{Mạch một pha có hai dây dẫn song song song} \label{Fig:mach-mot-pha-2-day-song-song}
+\end{figure}
+\subparagraph{Giả thiết} Cho đường dây một pha gồm 2 dây dẫn song song, đặt cách nhau một khoảng $D$, mỗi dây dẫn có bán kính là $r$ được mô tả trên hình \ref{Fig:mach-mot-pha-2-day-song-song}.
+\subparagraph{Kết quả}
+\begin{itemize}
+\item Khoảng cách trung bình hình học -- GMD: $D_m = D$.
+\item Bán kính trung bình hình học -- GMR: $D_s = r^\prime = re^{-0.25}$.
+\end{itemize}
+\item \textit{Đường dây một pha mạch kép}
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw (0.7,0.3) node{$a$}; \draw[dashed] (0,0) -- (0,1.5); \draw[dashed] (0,0) -- (-1.5,0); 
+\draw (4,0) circle (.5); \draw (4.7,0.3) node{$x$}; \draw[dashed] (4,0) -- (4,1.5);  \draw[dashed] (4,0) -- (5.5,0); 
+\draw (0,-2) circle (.5); \draw (0.7,-1.7) node{$b$}; \draw[dashed] (0,-2) -- (-1.5,-2); 
+\draw (4,-2) circle (.5);	\draw (4.7,-1.7) node{$y$}; \draw[dashed] (4,-2) -- (5.5,-2); 
+
+\draw[-triangle 90, dashed] (2,1) -- (0,1);
+\draw[-triangle 90, dashed] (2,1) -- (4,1);
+\draw (2,1.3) node{$D_{ax}$};
+
+\draw[-triangle 90, dashed] (-1,-1) -- (-1,0);
+\draw[-triangle 90, dashed] (-1,-1) -- (-1,-2);
+\draw (-1.5,-1) node{$D_{ab}$};
+
+\draw[-triangle 90, dashed] (5,-1) -- (5,0);
+\draw[-triangle 90, dashed] (5,-1) -- (5,-2);
+\draw (5.5,-1) node{$D_{xy}$};
+
+\draw[-triangle 90, dashed] (2,-1) -- (0,0);
+\draw[-triangle 90, dashed] (2,-1) -- (4,-2);
+\draw (2,-.7) node{$D_{ay}$};
+
+\draw[dashed] (0,0) -- (-.5,.5) -- (-1.5,.5);
+\draw (-1,.7) node{$r_a$};
+
+\draw[dashed] (0,-2) -- (-.5,-2.5) -- (-1.5,-2.5);
+\draw (-1,-2.8) node{$r_b$};
+
+\draw[dashed] (4,0) -- (4.5,.5) -- (5.5,.5);
+\draw (5,.7) node{$r_x$};
+
+\draw[dashed] (4,-2) -- (4.5,-2.5) -- (5.5,-2.5);
+\draw (5,-2.8) node{$r_y$};
+\end{tikzpicture}
+\end{center}
+\caption{Đường dây một pha mạch kép} \label{Fig:mach-mot-pha-2-day-song-song-lo-kep}
+\end{figure}
+\subparagraph{Giả thiết} Cho đường dây một pha gồm 2 dây dẫn song song với các kích thước và khoảng cách được mô tả trên hình \ref{Fig:mach-mot-pha-2-day-song-song-lo-kep}.
+\subparagraph{Kết quả}
+\begin{itemize}
+\item Khoảng cách trung bình hình học -- GMD: $D_m = \sqrt[4]{D_{ax}D_{ay}D_{bx}D_{by}}$
+\item Bán kính trung bình hình học -- GMR:
+\begin{itemize}
+\item Dây dẫn $ab$: $D_s = \sqrt[4]{r_a^{\prime} r_b^{\prime} D_{ab} D_{ba}}$%, với $r_a^\prime = r_a  e^{-0.25}$ và $r_b^\prime = r_b  e^{-0.25}$.
+\item Dây dẫn $xy$: $D_s = \sqrt[4]{r_x^{\prime} r_ y^{\prime} D_{xy} D_{yx}}$%, , với $r_x^\prime = r_x e^{-0.25}$ và $r_y^\prime = r_y e^{-0.25}$.
+\item[$\ast$] Các giá trị $r^\prime$ có được bằng cách tra bảng \ref{Tab:GMD-day-dan-ben-nhieu-soi} trang \pageref{Tab:GMD-day-dan-ben-nhieu-soi}.
+\end{itemize}
+\end{itemize}
+\newpage
+\item \textit{Dây dẫn bện nhiều sợi}
+
+Với dây dẫn bện nhiều sợi, khoảng cách trung bình hình học -- GMD được cho trong bảng \ref{Tab:GMD-day-dan-ben-nhieu-soi}.
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c||c|c|}\hline
+Số sợi & GMD & Số sợi & GMD \\ \hline
+1 & $0.779R$ & 91 & $0.774R$ \\ \hline
+7 & $ 0.726R$ & 127 & $0.776R$\\ \hline
+19 & $0.758R$ & 30 (2 lớp) & $0.826R$ \\ \hline
+37 & $0.768R$ & 26 (2 lớp) & $0.809R$\\ \hline
+61 & $0.772R$ & 54 (3 lớp) & $0.810R$\\ \hline
+\multicolumn{4}{|c|}{$R$ là bán kính ngoài của dây dẫn bện nhiều sợi}\\ \hline
+\end{tabular}
+\end{center}
+\caption{GMD của dây dẫn nhiều sợi} \label{Tab:GMD-day-dan-ben-nhieu-soi}
+\end{table}
+\item \textit{Mạch ba pha lộ đơn}
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (0.5);  \draw (0,-.5) node[below]{$b$};
+\draw (4,0) circle (0.5); \draw (4,-.5) node[below]{$c$};
+\draw (2,3.5) circle (0.5);\draw (2,4) node[above]{$a$};
+\draw[dashed] (0,0) -- (4,0) -- (2, 3.5) -- (0,0);
+\draw (2, 0) node[below] {$D_{bc}$};
+\draw (0.6, 1.75) node[left] {$D_{ab}$};
+\draw (3.4, 1.75) node[right] {$D_{ac}$};
+\end{tikzpicture}
+\end{center}
+\caption{Mạch ba pha lộ đơn} \label{Fig:mach-ba-lo-don}
+\end{figure}
+\subparagraph{Giả thiết} Cho đường dây ba pha lộ đơn như hình \ref{Fig:mach-ba-lo-don}.
+\subparagraph{Kết quả}
+\begin{itemize}
+\item Khoảng cách trung bình hình học -- GMD: $D_m = \sqrt[3]{D_{ab}D_{bc}D_{ac}}$. \item Bán kính trung bình hình học -- GMR: $D_s = \sqrt[3]{r_{a}^\prime r_{b}^\prime r_{c}^\prime}$.
+\item[$\ast$] Các giá trị $r^\prime$ có được bằng cách tra bảng \ref{Tab:GMD-day-dan-ben-nhieu-soi} trang \pageref{Tab:GMD-day-dan-ben-nhieu-soi}.
+\end{itemize}
+
+\item \textit{Mạch ba pha đường lộ kép}
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw (0.5, 0) node[right]{$a$};
+\draw (-2,-2) circle (.5); \draw (-1.5, -2) node[right]{$b$};
+\draw (0,-4) circle (.5); \draw (0.5, -4) node[right]{$c$};
+\draw (6,0) circle (.5); \draw (5, 0) node[right]{$c^\prime$};
+\draw (8,-2) circle (.5);  \draw (7, -2) node[right]{$b^\prime$};
+\draw (6,-4) circle (.5); \draw (5, -4) node[right]{$a^\prime$};
+\end{tikzpicture}
+\end{center}
+\caption{Mạch ba pha đảo pha trên đường dây lộ kép} \label{Fig:mach-ba-duong-day-kep}
+\end{figure}
+\subparagraph{Giả thiết} Cho đường dây ba pha lộ kép thực hiện đảo pha như hình \ref{Fig:mach-ba-duong-day-kep}.
+\subparagraph{Kết quả}
+\begin{itemize}
+\item Khoảng cách trung bình hình học -- GMD: $D_m = \sqrt[3]{D_{AB}D_{BC}D_{AC}}$. Với:
+	\begin{align*}
+	 D_{AB} = \sqrt[4]{D_{ab} D_{ab^\prime} D_{a^\prime b} D_{a^\prime b^\prime}}; \qquad D_{BC} = \sqrt[4]{D_{bc} D_{bc^\prime} D_{b^\prime c} D_{b^\prime c^\prime}}; \quad D_{AC} = \sqrt[4]{D_{ac} D_{ac^\prime} D_{a^\prime c} D_{a^\prime c^\prime}}
+	\end{align*}
+\item Bán kính trung bình hình học -- GMR: $D_s = \sqrt[3]{D_{sA}  D_{sB} D_{sC}}$. Với: 
+	\begin{align*}
+		D_{sA}  = \sqrt{r^\prime D_{a a^\prime}}; \quad D_{sB}  = \sqrt{r^\prime D_{ b b^\prime}}; \quad D_{sC}  = \sqrt{r^\prime D_{c c^\prime}}
+	\end{align*}
+	\item[$\ast$] Các giá trị $r^\prime$ có được bằng cách tra bảng \ref{Tab:GMD-day-dan-ben-nhieu-soi} trang \pageref{Tab:GMD-day-dan-ben-nhieu-soi}.
+\end{itemize}
+\end{enumerate}
+\subsection{Điện cảm và cảm kháng}
+\begin{itemize}
+\item Điện cảm trên $1\unit{km}$ của dây dẫn: $L_0 = 2 \times 10^{-4}\times \ln{\dfrac{D_m}{D_s}} \unitp{H/km}$.
+\item Điện kháng trên $1\unit{km}$ dây dẫn: $x_0 = \omega L_0 = 2\pi f L_0 \unitp{\Omega/km}$.
+\item Điện cảm trên toàn bộ đường dây có chiều dài  $l \unitp{km}$: $L = L_0 \times l$.
+\item Điện kháng trên toàn bộ đường dây có chiều dài  $l \unitp{km}$: $X = x_0 \times l$.
+\end{itemize}
+\subsection{Điện dung, dung kháng và dung dẫn}
+\begin{itemize}
+\item Điện dung trên một $km$ so với trung tính:
+	\begin{align*}
+		C_0 =\dfrac{1}{18 \times 10^6 \times  \ln{\dfrac{D_m}{D_s}}} \unitp{F/km}
+	\end{align*}
+\item[$\ast$] \emph{Lưu ý:} Khi tính điện dung thì thay $r^\prime = r$ vào các công thức tính $D_s$ và $D_m$ được xác định như các công thức ở phần \ref{Sec:Dm-Ds} trang \pageref{Sec:Dm-Ds}.
+\item Dung kháng trên một $km$:
+	\begin{align*}
+		x_0 = \dfrac{1}{\omega C_0} = \dfrac{18 \times 10^6 \times \ln{\dfrac{D_m}{D_s}} }{2\pi f} \unitp{\Omega / km}
+	\end{align*}
+\item Dung dẫn trên một $km$:
+	\begin{align*}
+		b_0 = \omega C_0 = \dfrac{2\pi f}{18 \times 10^6 \times  \ln{\dfrac{D_m}{D_s}}} \unitp{\Omega^{-1}/km}
+	\end{align*}
+\item Điện dung trên toàn bộ đường dây có chiều dài  $l \unitp{km}$: $C = C_0 \times l$.
+\item Dung kháng trên toàn bộ đường dây có chiều dài  $l \unitp{km}$: $X = x_0 \times l$.
+\item Dung dẫn trên toàn bộ đường dây có chiều dài  $l \unitp{km}$: $B = b_0 \times l$.
+\end{itemize}
+\subsection{Một số đơn vị dùng đo kích thước và chiều dài dây dẫn}
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|l|}\hline
+\multicolumn{2}{|c|}{$1 \unit{mil} = 10^{-3} \unit{inch} = 2.54 \times 10^{-3} \unit{inch}$} \\ \hline
+$1 \unit{inch} = 2.54 \unit{cm}$ & $1 \unit{cm} = 0.3937 \unit{inch} = 393.7 \unit{mil}$\\ \hline
+$1 \unit{mile} = 1609 \unit{m} = 1.609 \unit{km}$ & $1 \unit{km} = 0.6214 \unit{mile}$ \\ \hline
+$1 \unit{foot} = 30.48 \unit{cm} = 3.048 \unit{dm}$ & $1 \unit{m} = 3.281 \unit{foot}$ \\ \hline
+$1 \unit{foot} = 12 \unit{inch}$ & \\ \hline
+$1 \unit{CM} = 5.067 \unit{mm^2}$ & $1 \unit{MCM} = 10^3 \unit{CM}$\\ \hline
+\end{tabular}
+\end{center}
+\caption{Đơn vị thường dùng để đo kích thước dây dẫn}\label{Tab:don-vi-do-kich-thuoc-day-dan}
+\end{table}
+\subsection{Bài tập về các thông số đường dây truyền tải trên không}
+\begin{enumerate}
+\item \label{Ex-1} Tính điện cảm của mỗi $km$ đường dây truyền tải trên không một pha, dây dẫn bằng đồng, đặt cách nhau $1m$ và đường kính $1\unit{cm}$.
+\subparagraph{Bài giải bài tập \ref{Ex-1}}
+\begin{itemize}
+\item Xác định $D_m$ và $D_s$:
+	\begin{align*}
+		D_m & = D = 1 \unit{m} = 100 \unit{cm}\\
+		D_s & = r^{\prime} = r \times e^{-0.25} = \dfrac{1}{2} \times e^{-0.25} = 0.389 \unit{cm}
+	\end{align*}
+\item Nên: $L_0 = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_s}}  =  L_0 = 2 \times 10^{-4} \times \ln{\dfrac{100}{0.389}} = 1.110 \times 10^{-3} \unitp{H/km}$ .
+\end{itemize}
+\item \label{Ex-2} Một đường dây một pha gồm 2 dây dẫn $a, a^\prime$ song song và dây dẫn $b, b^\prime$ tạo đường dây về. Khoảng cách được cho trên hình \ref{Fig:bai-tap-2}. Tính điện cảm của đường dây (đi và về) trên mỗi $km$, biết đường kính của mỗi dây làm $2.6\unit{cm}$.
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw[dashed] (0,0) -- (0,1.5); \draw[dashed] (0,0) -- (-1.5,0); \draw (0.8, 0) node{$a$};
+\draw (3,0) circle (.5); \draw[dashed] (3,0) -- (3,1.5); \draw[dashed] (3,0) -- (4.5,0); \draw (2.2, 0) node{$b$};
+\draw (0,-2) circle (.5); \draw[dashed] (0,-2) -- (0,-3.5); \draw[dashed] (0,-2) -- (-1.5,-2);  \draw (0.8, -2) node{$a^\prime$};
+\draw (3,-2) circle (.5);  \draw[dashed] (3,-2) -- (3,-3.5); \draw[dashed] (3,-2) -- (4.5,-2);\draw (2.2, -2) node{$b^\prime$};
+\draw[dashed, -triangle 90] (1.5,1) -- (0,1); \draw[dashed, -triangle 90] (1.5,1) -- (3,1); \draw (1.5,1.3) node{$2m$};
+\draw[dashed, -triangle 90] (1.5,-3) -- (0,-3); \draw[dashed, -triangle 90] (1.5,-3) -- (3,-3); \draw (1.5,-2.7) node{$2m$};
+
+\draw[dashed, -triangle 90] (-1,-1) -- (-1,0); \draw[dashed, -triangle 90] (-1,-1) -- (-1,-2); \draw (-1.4,-1) node{$1m$};
+\draw[dashed, -triangle 90] (4,-1) -- (4,0); \draw[dashed, -triangle 90] (4,-1) -- (4,-2); \draw (4.4,-1) node{$1m$};
+\end{tikzpicture}
+\end{center}
+\caption{Sơ đồ minh họa cho bài tập \ref{Ex-2}} \label{Fig:bai-tap-2}
+\end{figure}
+
+\subparagraph{Bài giải bài tập \ref{Ex-2}}
+\begin{itemize}
+	\item Bán kính dây dẫn $r_a = r_{a^\prime} = r_b = r_{b^\prime} = r = \dfrac{2.6}{2} = 1.3 \unit{cm} = 1.3 \times 10^{-2} \unit{m}$.
+	\item Khoảng cách: $D_{a b^\prime } = D_{a^\prime b} = \sqrt{1^2 + 2^2 } = \sqrt{5} \unit{m}$.
+	\item Xác định $D_m$ và $D_s$:
+	\begin{align*}
+		D_m & = \sqrt[4]{D_{ab} D_{ab^\prime}D_{a^\prime b} D_{a^\prime b^\prime}} = \sqrt[4]{2 \times \sqrt{5} \times \sqrt{5} \times 2} =2.115 \unit{m} \\
+		D_{s_{aa^{\prime}}} & = \sqrt[4]{r_a^\prime r_{a^\prime}^\prime D_{a a^\prime} D_{a a^\prime}} = \sqrt[4]{r_a e^{-0.25} r_{a^\prime} e^{-0.25} D_{a a^\prime} D_{a a^\prime}} \\
+		& = \sqrt{re^{-0.25} D_{a a^\prime}} = \sqrt{1.3 \times 10^{-2} \times e^{-0.25} \times 1} =0.101 \unit{m} \\
+		D_{s_{bb^{\prime}}} & = \sqrt[4]{r_b^\prime r_{b^\prime}^\prime D_{b b^\prime} D_{b b^\prime}} = \sqrt[4]{r_b e^{-0.25} r_{b^\prime} e^{-0.25} D_{b b^\prime} D_{b b^\prime}} \\
+		& = \sqrt{re^{-0.25} D_{b b^\prime}} = \sqrt{1.3 \times 10^{-2} \times e^{-0.25} \times 1} =0.101 \unit{m}
+	\end{align*}
+\item Xác định của đường dây đi và về trên mỗi $km$:
+	\begin{align*}
+		L_{0_{a a^\prime }} & = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_{s_{a a^\prime}}}} = 2 \times 10^{-4} \times \ln{\dfrac{2.115}{0.101}} = 6.083 \times 10^{-4} \unitp{H/km}\\
+		L_{0_{b b^\prime }} & = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_{s_{b b^\prime}}}} = 2 \times 10^{-4} \times \ln{\dfrac{2.115}{0.101}} = 6.083 \times 10^{-4} \unitp{H/km}
+	\end{align*}
+\end{itemize}
+
+\item \label{Ex-3} Một đường dây truyền tải trên không 3 pha, đường kính mỗi dây là $1.8 \unit{cm}$ và được bố trí như hình \ref{Fig:bai-tap-3}. Tải cân bằng và dây có hoán đổi vị trí. Tìm điện cảm của đường dây trên từng $km$ mỗi pha.
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw (0,-.5) node[below] {$b$};
+\draw (5,0) circle (.5); \draw (5,-.5) node[below] {$c$};
+\draw (1.5,3) circle (.5); \draw (1.5,3.5) node[above] {$a$};
+
+\draw[dashed] (0,0) -- (5,0) -- (1.5,3) -- (0,0);
+\draw (2.5,0) node[below] {$9m$};
+\draw (3.8,1.5) node[right] {$6m$};
+\draw (-.3,1.5) node[right] {$4m$};
+\end{tikzpicture}
+\end{center}
+\caption{Sơ đồ minh họa cho bài tập \ref{Ex-3}} \label{Fig:bai-tap-3}
+\end{figure}
+\subparagraph{Bài giải bài tập \ref{Ex-3}}
+\begin{itemize}
+	\item Ta có: bán kính dây dẫn $r = \dfrac{1.8}{2} = 0.9 \unit{cm} = 9 \times 10^{-3} \unit{m}$.
+	\item Suy ra: $r_a^\prime = r_b^\prime = r_c^\prime = r e^{-0.25} = 9 \times 10^{-3} \times e^{-0.25} = 7 \times 10^{-3} \unit{m}$.
+	\item Xác định $D_m$ và $D_s$:
+		\begin{align*}
+			D_m & = \sqrt[3]{D_{ab} D_{bc} D_{ac}} = \sqrt[3]{4 \times 9 \times 6} = 6 \unit{m}\\
+			D_s & = \sqrt[3]{r_{a}^\prime r_{b}^\prime r_{c}^\prime} = \sqrt[3]{7 \times 10^{-3} \times 7 \times 10^{-3} \times 7 \times 10^{-3}} = 7 \times 10^{-3} \unit{m}
+		\end{align*}
+		\item Điện cảm trên mỗi $km$ của mỗi pha:
+		\begin{align*}
+		L_0 = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_s}} = 2 \times 10^{-4} \times \ln{\dfrac{6}{7 \times 10^{-3}}} = 1.35 \times 10^{-3} \unitp{H/km}
+	\end{align*}
+\end{itemize}
+
+\item \label{Ex-4} Đường dây 3 pha mạch kép, gồm các dây dẫn $a, a^\prime, b, b^\prime$ và $c, c^\prime$ tương ứng $a, b, c$ như hình \ref{Fig:bai-tap-3}. Mỗi dây dẫn cách nhau $1m$, đường kính mỗi dây làm $2cm$. Tính điện cảm của đường dây mạch kép trên mỗi $km$ từng pha và điện kháng mỗi pha trên mỗi $km$ đường dây với tần số $50 \unit{Hz}$.
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw[dashed] (0,0) -- (0,1.5); \draw (0,-0.5) node[below]{$a$};
+\draw (2,0) circle (.5); \draw[dashed] (2,0) -- (2,1.5); \draw (2,-0.5) node[below]{$b$};
+\draw (4,0) circle (.5); \draw[dashed] (4,0) -- (4,1.5); \draw (4,-0.5) node[below]{$c$};
+\draw (6,0) circle (.5); \draw[dashed] (6,0) -- (6,1.5); \draw (6,-0.5) node[below]{$a^\prime$};
+\draw (8,0) circle (.5); \draw[dashed] (8,0) -- (8,1.5); \draw (8,-0.5) node[below]{$b^\prime$};
+\draw (10,0) circle (.5); \draw[dashed] (10,0) -- (10,1.5); \draw (10,-0.5) node[below]{$c^\prime$};
+
+\draw[dashed, -triangle 90] (1,1) -- (0,1); \draw[dashed, -triangle 90] (1,1) -- (2,1);\draw (1,1) node[above] {$1m$};
+
+\draw[dashed, -triangle 90] (3,1) -- (2,1); \draw[dashed, -triangle 90] (3,1) -- (4,1);\draw (3,1) node[above] {$1m$};
+
+\draw[dashed, -triangle 90] (5,1) -- (4,1); \draw[dashed, -triangle 90] (5,1) -- (6,1);\draw (5,1) node[above] {$1m$};
+
+\draw[dashed, -triangle 90] (7,1) -- (6,1); \draw[dashed, -triangle 90] (7,1) -- (8,1);\draw (7,1) node[above] {$1m$};
+
+\draw[dashed, -triangle 90] (9,1) -- (8,1); \draw[dashed, -triangle 90] (9,1) -- (10,1);\draw (9,1) node[above] {$1m$};
+
+\end{tikzpicture}
+\end{center}
+\caption{Sơ đồ minh họa cho bài tập \ref{Ex-4}} \label{Fig:bai-tap-4}
+\end{figure}
+\subparagraph{Bài giải bài tập \ref{Ex-4}}
+\begin{itemize}
+	\item Ta có: bán kính dây dẫn $r = \dfrac{2}{2} = 1 \unit{cm} = 0.01 \unit{m}$.
+	\item Suy ra: $r_{a}^\prime = r_{a^\prime}^\prime = r_{b}^\prime = r_{b^\prime}^\prime = r_{c}^\prime = r_{c^\prime}^\prime = r^\prime =  r e^{-0.25} = 0.01 \times e^{-0.25} = 7.88 \times 10^{-3} \unit{m}$.
+	\item Xác định $D_m$ và $D_s$:
+		\begin{itemize}
+			\item Xác định $D_{AB}, D_{BC}, D_{AC}$:
+			\begin{align*}
+				D_{AB} & = \sqrt[4]{D_{ab} D_{ab^\prime} D_{a^\prime b} D_{a^\prime b^\prime}} =\sqrt[4]{1 \times 4 \times 2 \times 1} = \sqrt[4]{8} \unit{m}\\
+				D_{BC} & = \sqrt[4]{D_{bc} D_{bc^\prime} D_{b^\prime c} D_{b^\prime c^\prime}} = \sqrt[4]{1 \times 4 \times 2 \times 1} = \sqrt[4]{8} \unit{m}\\
+				D_{AC} & = \sqrt[4]{D_{ac} D_{ac^\prime} D_{a^\prime c} D_{a^\prime c^\prime}} = \sqrt[4]{2 \times 5 \times 1 \times 2}= \sqrt[4]{20} \unit{m}
+			\end{align*}
+			
+			\item Suy ra: $D_m =\sqrt[3]{D_{AB} D_{BC}D_{AC}} = \sqrt[3]{\sqrt[4]{8} \times \sqrt[4]{8} \times \sqrt[4]{20}}  = 1.815 \unit{m}$.	
+			\item Xác định $D_{sA}, D_{sB}, D_{sC}$:
+			\begin{align*}
+				D_{sA} & = \sqrt{r^\prime D_{a a^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}\\
+				D_{sB} & = \sqrt{r^\prime D_{b b^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}\\
+				D_{sC} & = \sqrt{r^\prime D_{c c^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}
+			\end{align*}
+			\item Suy ra: $D_s = \sqrt[3]{D_{sA} D_{sB}D_{sC}} = \sqrt[3]{0.153 \times 0.153 \times 0.153} = 0.153 \unit{m}$.
+		\end{itemize}
+	\item Điện cảm trên mỗi $km$ của mỗi pha trên đường dây mạch kép:
+	\begin{align*}
+		L_0 = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_s}} = 2 \times 10^{-4} \times \ln{\dfrac{1.815}{0.153}} = 4.947 \times 10^{-4} \unitp{H/km}
+	\end{align*}
+	
+	\item Điện kháng trên mỗi $km$ của mỗi pha trên đường dây mạch kép:
+		\begin{align*}
+			x_0 = 2 \pi f L_0 = 2 \pi \times 50 \times 4.947 \times 10^{-4} = 0.155 \unitp{\Omega /km}
+		\end{align*}
+\end{itemize}
+	\item \label{Ex-5} Một đường dây ba pha có đường kính mỗi dây là $2 \unit{cm}$ đặt cách nhau $2 \unit{m}$ theo đường nằm ngang như hình \ref{Fig:bai-tap-5}. Tìm điện dung của mỗi pha đối với trung tính trên $100 \unit{km}$ đường dây.
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw (0,-.5) node[below] {$a$}; \draw[dashed] (0,0) -- (0, 1.5);
+\draw (3,0) circle (.5); \draw (3,-.5) node[below] {$b$}; \draw[dashed] (3,0) -- (3, 1.5);
+\draw (6,0) circle (.5); \draw (6,-.5) node[below] {$c$}; \draw[dashed] (6,0) -- (6, 1.5);
+
+\draw[dashed, -triangle 90] (1.5,1) -- (0,1); \draw[dashed, -triangle 90] (1.5,1) -- (3,1);\draw (1.5,1) node[above] {$2m$};
+
+\draw[dashed, -triangle 90] (4.5,1) -- (0,1); \draw[dashed, -triangle 90] (4.5,1) -- (6,1);\draw (4.5,1) node[above] {$2m$};
+\end{tikzpicture}
+\end{center}
+\caption{Sơ đồ minh họa cho bài tập \ref{Ex-5}} \label{Fig:bai-tap-5}
+\end{figure}
+	\subparagraph{Bài giải bài tập \ref{Ex-5}}
+	\begin{itemize}
+		\item Ta có: bán kính dây dẫn $r_a = r_b = r_c = r = \dfrac{2}{2} = 1 \unit{cm} = 0.01 \unit{m}$.
+		\item Xác định $D_m$ và $D_s$:
+			\begin{align*}
+				D_m & =\sqrt[3]{D_{ab} D_{bc} D_{ac}} = \sqrt[3]{2 \times 2 \times 4} = 2.520 \unit{m}\\
+				D_s & = \sqrt[3]{r_a r_b r_c} = \sqrt[3]{0.01 \times 0.01 \times 0.01 }= 0.01 \unit{m}
+			\end{align*}
+		\item Điện dung trên mỗi $km$ chiều dài:
+			\begin{align*}
+				C_0 =\dfrac{1}{18 \times 10^6 \times  \ln{\dfrac{D_m}{D_s}}} = \dfrac{1}{18 \times 10^{6} \times  \ln{\dfrac{2.520}{0.01}}} = 1 \times 10^{-8} \unitp{F/km} 
+			\end{align*}
+			
+		\item Điện dung trên $100 \unit{km}$ đường dây: $C = C_0 l = 10^{-8} \times 100 = 10^{-6} \unitp{F}$
+	\end{itemize}
+	\begin{comment}
+	\item \label{Ex-6} Một đường dây ba pha lộ kép có hoán vị được cho trên hình \ref{Fig:bai-tap-6}. Bán kính mỗi dây là $1.25 \unit{cm}$. Tính điện cảm trên mỗi $km$ đường dây và điện dung trên mỗi $km$ so với trung tính của mỗi pha.
+	\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) circle (.5); \draw (-.5, 0) node[left]{$a$};
+\draw (-2,-2) circle (.5); \draw (-2.5, -2) node[left]{$b$};
+\draw (0,-4) circle (.5); \draw (-.5, -4) node[left]{$c$};
+\draw (4,0) circle (.5); \draw (3.5, 0) node[left]{$c^\prime$};
+\draw (6,-2) circle (.5);  \draw (5.5, -2) node[left]{$b^\prime$};
+\draw (4,-4) circle (.5); \draw (3.5, -4) node[left]{$a^\prime$};
+\draw[dashed] (0,0) -- (0,1.5);
+\draw[dashed] (4,0) -- (4,1.5);
+\draw[dashed] (-2,-2) -- (-2,-.5);
+\draw[dashed] (6,-2) -- (6,-.5);
+\draw[dashed] (4,0) -- (8,0);
+\draw[dashed] (6,-2) -- (8,-2);
+\draw[dashed] (4,-4) -- (8,-4);
+
+\draw[dashed, -triangle 90] (2,1) -- (0,1);
+\draw[dashed, -triangle 90] (2,1) -- (4,1); \draw (2,1) node[above] {$7.5m$};
+
+\draw[dashed, -triangle 90] (4,-1) -- (-2,-1);
+\draw[dashed, -triangle 90] (4,-1) -- (6,-1); \draw (2,-1) node[above] {$9m$};
+
+\draw[dashed, -triangle 90] (7.5,-1) -- (7.5,0);
+\draw[dashed, -triangle 90] (7.5,-1) -- (7.5,-2); \draw (7.5,-1) node[right] {$4m$};
+
+\draw[dashed, -triangle 90] (7.5,-3) -- (7.5,-2);
+\draw[dashed, -triangle 90] (7.5,-3) -- (7.5,-4); \draw (7.5,-3) node[right] {$4m$};
+\end{tikzpicture}
+\end{center}
+\caption{Sơ đồ minh họa cho bài tập \ref{Ex-6}} \label{Fig:bai-tap-6}
+\end{figure}
+\subparagraph{Bài giải bài tập \ref{Ex-6}}
+\begin{itemize}
+	\item Ta có: bán kính dây dẫn $r = \dfrac{1.25}{2} = 0.625 \unit{cm} = 6.25 \times 10^{-3} \unit{m}$.
+	\item  Suy ra: $r^\prime = r e^{-0.25} = 4.868 \times 10^{-3} \unit{m}$.
+	\item Ta có:
+		\begin{align*}
+			D_{a b^\prime} & = \sqrt{\pfm{7.5 + \dfrac{9 - 7.5}{2}}^2 + 4^2} = 9.169 \unit{m}\\
+			D_{a^\prime b^\prime} & = \sqrt{\pfm{\dfrac{9 - 7.5}{2}}^2 + 4^2} = 4.070 \unit{m}
+		\end{align*}
+	\item Xác định $D_m$ và $D_s$:
+		\begin{itemize}
+			\item Xác định $D_{AB}, D_{BC}, D_{AC}$:
+			\begin{align*}
+				D_{AB} & = \pfm{D_{ab} D_{ab^\prime} D_{a^\prime b} D_{a^\prime b^\prime}}^{\frac{1}{4}} = \pfm{4.070 \times 9.169 \times 9.169 \times 4.070}^{\frac{1}{4}} = 6.109 \unit{m}\\
+				D_{BC} & = \pfm{D_{bc} D_{bc^\prime} D_{b^\prime c} D_{b^\prime c^\prime}}^{\frac{1}{4}} = \pfm{4.070 \times 9.169 \times 9.169 \times 4.070}^{\frac{1}{4}} = 6.109 \unit{m}\\
+				D_{AC} & = \pfm{D_{ac} D_{ac^\prime} D_{a^\prime c} D_{a^\prime c^\prime}}^{\frac{1}{4}} = \pfm{8 \times 7.5 \times 7.5 \times 8}^{\frac{1}{4}} = 2.783 \unit{m}
+			\end{align*}
+			
+			\item Suy ra: $D_m = \pfm{D_{AB} D_{BC}D_{AC}}^\frac{1}{3} = \pfm{\sqrt[4]{8} \times \sqrt[4]{8} \times \sqrt[4]{20}} ^\frac{1}{3} = 1.815 \unit{m}$.	
+			\item Xác định $D_{sA}, D_{sB}, D_{sC}$:
+			\begin{align*}
+				D_{sA} & = \sqrt{r^\prime D_{a a^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}\\
+				D_{sB} & = \sqrt{r^\prime D_{b b^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}\\
+				D_{sC} & = \sqrt{r^\prime D_{c c^\prime}} = \sqrt{7.88 \times 10^{-3} \times 3} = 0.153 \unit{m}
+			\end{align*}
+			\item Suy ra: $D_s = \pfm{D_{sA} D_{sB}D_{sC}}^\frac{1}{3} = \pfm{0.153 \times 0.153 \times 0.153} ^\frac{1}{3} = 0.153 \unit{m}$.
+		\end{itemize}
+	\item Điện cảm trên mỗi $km$ của mỗi pha trên đường dây mạch kép:
+	\begin{align*}
+		L_0 = 2 \times 10^{-4} \times \ln{\dfrac{D_m}{D_s}} = 2 \times 10^{-4} \times \ln{\dfrac{1.815}{0.153}} = 4.947 \times 10^{-4} \unitp{H/km}
+	\end{align*}
+	
+	\item Điện kháng trên mỗi $km$ của mỗi pha trên đường dây mạch kép:
+		\begin{align*}
+			x_0 = 2 \pi f L_0 = 2 \pi \times 50 \times 4.947 \times 10^{-4} = 0.155 \unitp{\Omega /km}
+		\end{align*}
+\end{itemize}
+\end{comment}
+\end{enumerate}
